@@ -44,7 +44,7 @@
 }
 
 /* Imagen en col 2, fila 1 */
-.info-image-container {
+.info-image {
   grid-column: 2;
   grid-row: 1;
   border-radius: 20px;
@@ -52,7 +52,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.info-image {
+.welcome-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -121,7 +121,7 @@
     padding: 30px;
   }
   
-  .info-image-container {
+  .info-image {
     grid-column: 1;
     grid-row: 2;
     height: 250px;

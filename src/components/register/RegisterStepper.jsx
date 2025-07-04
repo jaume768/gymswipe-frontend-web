@@ -351,8 +351,8 @@ const RegisterStepper = () => {
             updateData={updateFormData}
             errors={errors}
             error={error}
-            onVerify={handleEmailVerification}
-            onResendCode={handleEmailRegistration}
+            onVerifyEmail={handleEmailVerification}
+            onResendCode={handleSendVerificationEmail}
           />
         );
         
