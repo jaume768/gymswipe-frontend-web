@@ -1,0 +1,182 @@
+/* Estilos para la sección de información */
+.info-section {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  padding: 80px 0;
+  width: 100%;
+}
+
+/* GRID de 2 columnas x 2 filas */
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* La tarjeta de texto ocupa col 1 y filas 1–2 */
+.info-text {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  background-color: var(--card-dark);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.info-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+/* Imagen en col 2, fila 1 */
+.info-image-container {
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Feature card en col 2, fila 2 */
+.feature-card {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: var(--card-dark);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  letter-spacing: -0.3px;
+}
+
+.feature-description {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive para tablet */
+@media (max-width: 1024px) {
+  .info-container {
+    padding: 0 30px;
+    gap: 30px;
+  }
+  
+  .info-title {
+    font-size: 3.5rem;
+  }
+  
+  .info-description {
+    font-size: 1.4rem;
+  }
+  
+  .feature-title {
+    font-size: 2rem;
+  }
+  
+  .feature-description {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .info-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 0 20px;
+    gap: 30px;
+  }
+  
+  .info-text {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 30px;
+  }
+  
+  .info-image-container {
+    grid-column: 1;
+    grid-row: 2;
+    height: 250px;
+  }
+  
+  .feature-card {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 30px;
+  }
+  
+  .info-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  
+  .info-description {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .feature-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .feature-description {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-section {
+    padding: 60px 0;
+  }
+  
+  .info-text,
+  .feature-card {
+    padding: 25px;
+  }
+  
+  .info-title {
+    font-size: 2.2rem;
+  }
+  
+  .info-description {
+    font-size: 1.1rem;
+  }
+  
+  .feature-title {
+    font-size: 1.6rem;
+  }
+  
+  .feature-description {
+    font-size: 1rem;
+  }
+}

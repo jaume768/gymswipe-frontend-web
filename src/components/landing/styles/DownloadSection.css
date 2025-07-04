@@ -1,0 +1,194 @@
+.download-section {
+  background-color: var(--background-dark);
+  color: var(--text-white);
+  padding: 80px 0;
+}
+
+.download-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.download-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.download-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.download-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.store-button {
+  transition: transform 0.3s ease;
+  max-width: 200px;
+}
+
+.store-button:hover {
+  transform: scale(1.05);
+}
+
+.store-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.iphone-instructions {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.instructions-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.instructions-list {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.instructions-list li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.instructions-note {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-style: italic;
+}
+
+.mobile-preview {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .download-container {
+    padding: 0 30px;
+    gap: 40px;
+  }
+  
+  .download-title {
+    font-size: 3.5rem;
+  }
+  
+  .mobile-image {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-section {
+    padding: 60px 0;
+  }
+  
+  .download-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+    gap: 40px;
+  }
+  
+  .download-title {
+    font-size: 3rem;
+  }
+  
+  .download-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .download-buttons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .store-button {
+    max-width: 180px;
+  }
+  
+  .mobile-preview {
+    order: -1;
+  }
+  
+  .mobile-image {
+    max-width: 200px;
+  }
+  
+  .iphone-instructions {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-title {
+    font-size: 2.5rem;
+  }
+  
+  .download-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .store-button {
+    max-width: 160px;
+  }
+  
+  .mobile-image {
+    max-width: 180px;
+  }
+  
+  .iphone-instructions {
+    padding: 20px;
+  }
+  
+  .instructions-title {
+    font-size: 1.3rem;
+  }
+  
+  .instructions-list li {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,258 @@
+/* Importar variables globales */
+@import '../../../styles/variables.css';
+
+/* Estilos generales de la sección hero */
+.hero-section {
+  background-color: var(--background-dark);
+  min-height: 100vh;
+  color: var(--text-white);
+  font-family: var(--font-family-main);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+  gap: 6px;
+}
+
+.logo-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 100%;
+  height: auto;
+}
+
+.logo-text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.nav-link {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 0.8em;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.nav-link:hover, .nav-link.active {
+  opacity: 0.8;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-white);
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Hero Content */
+.hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 0;
+}
+
+.hero-text-container {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, var(--gradient-purple-start), var(--gradient-purple-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, var(--gradient-purple-start), var(--gradient-purple-end));
+  color: var(--text-white);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(132, 35, 223, 0.3);
+}
+
+.login-button-hero {
+  background: transparent;
+  color: var(--text-white);
+  border: 2px solid var(--text-white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-button-hero:hover {
+  background: var(--text-white);
+  color: var(--background-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 0 30px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .nav-links {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-dark);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .nav-item {
+    font-size: 2rem;
+  }
+  
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .cta-button, .login-button-hero {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-container {
+    padding: 0 20px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .logo-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .cta-button, .login-button-hero {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}

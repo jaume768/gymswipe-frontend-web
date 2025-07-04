@@ -1,0 +1,260 @@
+/* Common styles for all registration steps */
+.register-step {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.step-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.step-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.step-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Form Elements */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 0.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: var(--text-white);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--gradient-purple-start);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(132, 35, 223, 0.2);
+}
+
+.form-input.error {
+  border-color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.form-input.success {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+/* Input wrapper for icons */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-button {
+  position: absolute;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.input-icon-button:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Messages */
+.error-message {
+  font-size: 0.875rem;
+  color: #ff4444;
+  margin-top: 0.25rem;
+}
+
+.success-message {
+  font-size: 0.875rem;
+  color: #00ff88;
+  margin-top: 0.25rem;
+}
+
+.error-banner {
+  padding: 0.875rem 1rem;
+  background: rgba(255, 68, 68, 0.15);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkmark {
+  background: linear-gradient(135deg, var(--gradient-purple-start), var(--gradient-purple-end));
+  border-color: var(--gradient-purple-start);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-text {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+/* Links */
+.link {
+  color: var(--gradient-purple-start);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--gradient-purple-end);
+  text-decoration: underline;
+}
+
+/* Step info */
+.step-info {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.step-info p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Mobile optimizations */
+@media (max-width: var(--mobile-width)) {
+  .step-title {
+    font-size: 1.5rem;
+  }
+  
+  .step-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .step-content {
+    gap: 1.25rem;
+  }
+  
+  .form-input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .checkbox-container {
+    padding-left: 1.75rem;
+  }
+  
+  .checkmark {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: calc(var(--mobile-width) + 1px)) and (max-width: var(--tablet-width)) {
+  .step-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: calc(var(--tablet-width) + 1px)) {
+  .step-title {
+    font-size: 2rem;
+  }
+}

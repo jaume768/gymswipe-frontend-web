@@ -1,0 +1,16 @@
+.register-page {
+  background: var(--background-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .register-page {
+    padding: 0;
+  }
+}
